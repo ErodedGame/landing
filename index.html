@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#030504">
+    <meta name="description" content="Eroded. Cryosleep ends. The ship clock overflows. The stars you know are gone. Sign up for early access.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ERODED / signal recovered">
+    <meta property="og:description" content="The ship is still here. So are you.">
+    <title>ERODED / signal recovered</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/fonts/SourceCodePro-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="ship-model.js" defer></script>
+    <script src="ship-flight.js" defer></script>
+  </head>
+  <body>
+    <div class="starfield" id="starfield" aria-hidden="true"></div>
+    <canvas class="ship-flight" id="ship-flight" aria-hidden="true"></canvas>
+    <main class="scene" aria-label="Eroded shipboard transmission">
+      <div class="monitor" id="monitor">
+        <span class="case-screw screw-top-left" aria-hidden="true"></span>
+        <span class="case-screw screw-top-right" aria-hidden="true"></span>
+        <div class="screen-surround">
+          <div class="crt-screen">
+            <div class="screen-content">
+              <div class="terminal-heading">
+                <h1><img class="eroded-logo" src="assets/eroded-logo.svg" width="584" height="100" alt="Eroded"></h1>
+                <div class="ship-clock" id="ship-clock" role="group" aria-label="Ship clock">
+                  <span class="clock-label">CURRENT YEAR</span>
+                  <p id="ship-year" aria-hidden="true">2089</p>
+                  <span class="sr-only" id="clock-description">Ship year 2089. The cryosleep clock will advance past its signed 64-bit limit before the recovered transmission continues.</span>
+                </div>
+              </div>
+              <div class="terminal-rule" aria-hidden="true"></div>
+              <div class="scrollback" id="scrollback" tabindex="0" role="region" aria-label="Recovered transmission">
+                <div class="transmission" id="transmission" aria-live="off">
+                  <p class="log-line system" data-delay="600">[OK]  kernel restored</p>
+                  <p class="log-line system" data-delay="450">[OK]  hull intact</p>
+                  <p class="log-line warning" data-delay="650">[!!]  cryosleep timer overflow</p>
+                  <p class="log-line paragraph" data-delay="650" data-ship-reveal>you awake on your ship.</p>
+                  <p class="log-line" data-delay="650">the stars you know are gone.</p>
+                  <p class="log-line warning" data-delay="450">oxygen: 23%. fuel: 3%</p>
+                  <p class="log-line" data-delay="700">explore. mine. trade. survive</p>
+                  <p class="log-line bright paragraph" data-delay="750">“we thought we were the last ones.”</p>
+                </div>
+              </div>
+              <div class="return-channel" id="return-channel">
+                <p class="log-line system">open universe space mmo</p>
+                <p class="log-line system" id="carrier-state" role="status" aria-live="polite">{{if .Subscribed}}early access signup accepted.{{else}}early access signup open.{{end}}</p>
+                <form id="return-address-form" action="/signup" method="post" data-subscribed="{{.Subscribed}}" aria-label="Sign up for Eroded early access"{{if .Subscribed}} hidden{{end}}>
+                  <label for="return-address">your_email <span aria-hidden="true">&gt;</span></label>
+                  <input id="return-address" name="email" type="email" value="{{.Email}}" autocomplete="email" enterkeyhint="send" spellcheck="false" placeholder="you@example.com" required maxlength="254" aria-describedby="channel-note response"{{if .Subscribed}} disabled{{end}}>
+                  <button id="transmit" type="submit" aria-label="Sign up for early access"{{if .Subscribed}} disabled{{end}}>[ ENTER ]</button>
+                </form>
+                <p id="response" class="response" role="status" aria-live="polite">{{.Message}}</p>
+                <p class="log-line system channel-note" id="channel-note"{{if .Subscribed}} hidden{{end}}>alpha updates. unsubscribe anytime.</p>
+              </div>
+            </div>
+            <div class="screen-roll" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="monitor-bezel">
+          <div class="manufacturer" aria-hidden="true">ERODED<span>MONOCHROME VIDEO TERMINAL</span></div>
+          <div class="vent" aria-hidden="true"></div>
+          <span class="power-light" aria-hidden="true"></span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

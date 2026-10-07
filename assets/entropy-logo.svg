@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="688" height="100" viewBox="32 46 688 100" fill="none" color="#92d39b" role="img" aria-labelledby="title description">
+  <title id="title">Entropy</title>
+  <desc id="description">A geometric industrial wordmark. The first E breaks into progressively displaced bars, like a decaying terminal signal.</desc>
+  <g fill="currentColor" transform="translate(32 46)">
+    <g id="entropy-e">
+      <path d="M0 12 12 0H84V20H20V38H64V58H20V76H44V96H0Z"/>
+      <path d="M72 42H92V62H72Z M52 80H76V100H52Z M84 88H96V100H84Z"/>
+    </g>
+    <path id="entropy-n" transform="translate(124)" d="M0 96V0H20L52 60V0H72V96H52L20 36V96Z"/>
+    <path id="entropy-t" transform="translate(220)" d="M0 0H72V20H46V96H26V20H0Z"/>
+    <path id="entropy-r" transform="translate(316)" fill-rule="evenodd" d="M0 96V0H56L72 16V48L56 64H44L76 96H50L20 64V96Z M20 20H48L52 24V40L48 44H20Z"/>
+    <path id="entropy-o" transform="translate(416)" fill-rule="evenodd" d="M16 0H56L72 16V80L56 96H16L0 80V16Z M24 20 20 24V72L24 76H48L52 72V24L48 20Z"/>
+    <path id="entropy-p" transform="translate(512)" fill-rule="evenodd" d="M0 96V0H56L72 16V48L56 64H20V96Z M20 20H48L52 24V40L48 44H20Z"/>
+    <path id="entropy-y" transform="translate(608)" d="M0 0H22L40 32 58 0H80L50 54V96H30V54Z"/>
+  </g>
+</svg>

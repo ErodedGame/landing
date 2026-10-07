@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none" color="#92d39b" role="img" aria-labelledby="title description">
+  <title id="title">Eroded symbol</title>
+  <desc id="description">An industrial E whose lower bars fracture and drift out of alignment.</desc>
+  <rect width="128" height="128" rx="12" fill="#0b0e0c"/>
+  <g fill="currentColor" transform="translate(16 14)">
+    <path d="M0 12 12 0H84V20H20V38H64V58H20V76H44V96H0Z"/>
+    <path d="M72 42H92V62H72Z M52 80H76V100H52Z M84 88H96V100H84Z"/>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="584" height="100" viewBox="32 46 584 100" fill="none" color="#92d39b" role="img" aria-labelledby="title description">
+  <title id="title">Eroded</title>
+  <desc id="description">A geometric industrial ERODED wordmark. The first E breaks into progressively displaced bars, like a decaying terminal signal. The RODED letters are slightly smaller after the full-size opening E.</desc>
+  <g fill="currentColor" transform="translate(32 46)">
+    <g id="eroded-e">
+      <path d="M0 12 12 0H84V20H20V38H64V58H20V76H44V96H0Z"/>
+      <path d="M72 42H92V62H72Z M52 80H76V100H52Z M84 88H96V100H84Z"/>
+    </g>
+    <path id="eroded-r" transform="translate(127.8 9.6) scale(0.9)" fill-rule="evenodd" d="M0 96V0H56L72 16V48L56 64H44L76 96H50L20 64V96Z M20 20H48L52 24V40L48 44H20Z"/>
+    <path id="eroded-o" transform="translate(227.6 9.6) scale(0.9)" fill-rule="evenodd" d="M16 0H56L72 16V80L56 96H16L0 80V16Z M24 20 20 24V72L24 76H48L52 72V24L48 20Z"/>
+    <path id="eroded-d" transform="translate(323.6 9.6) scale(0.9)" fill-rule="evenodd" d="M0 0H56L72 16V80L56 96H0Z M20 20V76H48L52 72V24L48 20Z"/>
+    <path id="eroded-second-e" transform="translate(419.6 9.6) scale(0.9)" d="M0 12 12 0H72V20H20V38H60V58H20V76H72V96H0Z"/>
+    <path id="eroded-final-d" transform="translate(515.6 9.6) scale(0.9)" fill-rule="evenodd" d="M0 0H56L72 16V80L56 96H0Z M20 20V76H48L52 72V24L48 20Z"/>
+  </g>
+</svg>
