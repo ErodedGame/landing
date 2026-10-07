@@ -462,6 +462,41 @@ button:disabled {
   letter-spacing: 0.16em;
 }
 
+.bezel-community {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.discord-link {
+  display: inline-flex;
+  min-height: 44px;
+  flex-shrink: 0;
+  align-items: center;
+  color: #acaf98;
+  text-shadow: 0 1px 0 #000c;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.discord-link:hover,
+.discord-link:focus-visible {
+  color: #d5dcc0;
+}
+
+.copyright {
+  color: #949b83;
+  text-shadow: 0 1px 0 #000c;
+  font-size: 9px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
 .vent {
   width: 105px;
   height: 12px;
@@ -573,6 +608,7 @@ button:disabled {
 
   .monitor-bezel {
     min-height: 61px;
+    gap: 16px;
     padding-inline: 6px;
   }
 
@@ -653,8 +689,17 @@ button:disabled {
 
   .monitor-bezel {
     min-height: 55px;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 0 10px;
     padding-inline: 5px;
+  }
+
+  .bezel-community {
+    order: 1;
+    flex-basis: 100%;
+    justify-content: center;
+    gap: 12px;
+    margin-left: 0;
   }
 
   .manufacturer {
@@ -667,6 +712,10 @@ button:disabled {
     letter-spacing: 0.09em;
   }
 
+  .discord-link {
+    font-size: 10px;
+  }
+
   .vent {
     display: none;
   }
@@ -674,7 +723,7 @@ button:disabled {
   .power-light {
     width: 5px;
     height: 5px;
-    margin-left: 3px;
+    margin-left: auto;
   }
 }
 

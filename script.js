@@ -86,11 +86,11 @@
   let ambientIndex = 0;
   const ambientNodes = [];
   const ambientMessages = [
-    "> station beacon repeating. stock is finite.",
-    "> helm program waiting for a destination.",
+    "> station beacon received. material stock replenished.",
+    "> helm program awaiting a destination.",
     "> automatic reply received. origin unresolved.",
-    "> life support is still drawing power.",
-    "> unidentified signal at sector edge.",
+    "> unknown ship beacons in range.",
+    "> unidentified signals at sector edge.",
     "\u201cstill there?\u201d",
   ];
 
@@ -115,7 +115,7 @@
           : clockStarted && !clockFinished
             ? "RECONSTRUCTING SHIP CLOCK"
             : kernelStarted && !kernelLoaded
-              ? "LOADING KERNEL"
+              ? "BOOTING KERNEL"
               : "RECOVERING SIGNAL";
   }
 
@@ -143,7 +143,7 @@
     const progress = Math.min(1, kernelElapsed / kernelDuration);
     const blocks = Math.floor(progress * 10);
     const record = records[0];
-    record.node.textContent = `loading kernel [${"#".repeat(blocks)}${".".repeat(10 - blocks)}] ${Math.floor(progress * 100)}%`;
+    record.node.textContent = `booting kernel [${"#".repeat(blocks)}${".".repeat(10 - blocks)}] ${Math.floor(progress * 100)}%`;
     follow();
     if (progress === 1) {
       kernelLoaded = true;
@@ -229,7 +229,7 @@
       if (ambientNodes.length > 1) ambientNodes.shift().remove();
       follow();
       scheduleAmbient();
-    }, 28000);
+    }, ambientIndex === 0 ? 2800 : 5000);
   }
 
   function completeTransmission() {
